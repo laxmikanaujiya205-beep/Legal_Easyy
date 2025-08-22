@@ -1,0 +1,23 @@
+body,html
+{
+
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+
+.main-div{
+flex:1;
+
+}
+
+*{
+font-family: cinzel;
+box-sizing: border-box;
+color: rgb(121, 121, 187);
+/* color:blue */
+
+}

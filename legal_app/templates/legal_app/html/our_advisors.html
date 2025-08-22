@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Advisors</title>
+     {% include 'legal_app/common/common_css.html' %}
+
+     <style>
+        .flex-container{
+
+          display: flex;
+          width: 100%;
+          height: 400px;
+          background-color: blanchedalmond;
+          flex-wrap: wrap;
+        }
+
+        .item-div{
+
+          width: 300px;
+          height: 300px;
+          background-color: aquamarine;
+          margin-left: 20px;
+        }
+
+        .item-div img{
+          width: 100%;
+          height: 100px;
+        }
+
+     </style>
+</head>
+<body>
+  <div class="main-div">
+
+    <div class="container-fluid" style="background-color: #2b5ed4;">
+      <h3 style="text-align: center;color: aquamarine;">
+      😊Legal Easyy Welcomes You🙏</h3>
+    </div>
+    <!--navbar code start-->
+{% include 'legal_app/common/header.html' %}
+  
+    <!--navbar code end-->
+   <h2 style="text-align: center;">Our Advisors</h2>
+
+    <div class="flex-container">
+      {%for l in legalAdvisor_key%}
+
+      <div class="item-div">
+
+        <img src="/media/{{s.service_pic}}" alt="">
+        <h6>AdvisorName:{{s.name}}</h6>
+        <h6>AdvisorEmail:{{s.email|}}</h6>
+        <h6>AdvisorService_type{{s.service_type}}</h6>
+        <h6>AdvisorQualification{{s.qualification}}</h6>
+        <h6>AdvisorPic:{{s.}}</h6>
+        <h6>AdvisorExperience:{{s.experience}}</h6>
+        <h6>AdvisorSkills:{{s.skills}}</h6>
+
+      </div>
+  {%endfor%}
+
+  </div>
+    <!--footer code start-->
+    {% include 'legal_app/common/footer.html'%}
+   <!-- footer ends -->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    
+
+</html>
